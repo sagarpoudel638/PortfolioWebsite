@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sagar</title>
+		<meta name="description" content="CV"/>
+		<meta name="keywords" content="HTML"/>
+		<meta name="author" content="Sagar"/>	
+		<link rel="stylesheet" href="css/style.css">
+	<!--internal CSS-->
+	<style>
+		
+		.text{ 
+		cursor:default;
+		}
+		.flex_container{ 
+		display:flex;
+		height:35px;
+		width:250px;
+		padding-left:300px;
+		}
+		.flex_container > div{
+		width:20x;
+		margin:10px;
+		text-align:center;
+		}
+		
+		#CV{ 
+		margin-left:10px;margin-top:0px;
+		list-style-type: none;
+		padding-left:0px;
+		overflow: hidden;
+		top: 0;
+		background-color:#F64C72;
+		}
+		
+		#CVin a{ 
+		font-family:Georgia;
+		display: flex;
+		color: white;
+		
+		padding: 7px 7px;
+		text-decoration:none;
+		cursor:pointer;
+		}
+		#CVin a:hover { 
+		background-color: #111;
+		}
+		.button { 
+		background-color: #F64C72;
+		border: none;
+		color: white;
+		padding: 7px 15px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius:12px;
+		}
+		.button:hover{ 
+		 background-color: #000000;
+		color: white
+		}
+		.image { 
+		width:310px;
+		height:310px;
+		padding-bottom:4px;
+		padding-left:4px;
+		padding-right:4px:
+		padding-top:8px;
+		margin-top:4px;
+		}
+		
+		.hide{
+		display: none
+		}
+		
+		.blogimg{
+		width:300px;
+		height:280px;
+		margin-left:20px;
+		margin-right:20px;
+		display:flex;
+		
+		padding-top:20px;
+		
+		}
+		.flex_blog{ 
+		 background: linear-gradient(to bottom, #3399ff 0%, #66ff66 100%);
+		display:flex;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		margin-left:20px;
+		flex-direction:column;
+		}
+		.blogtext{ 
+		font-family:Comic Sans MS;
+		font-size:15px;
+		margin-top:50px;
+		margin-left:10px;
+		}
+		.bgflex
+		{ 
+			display:flex;
+			width:1500px;
+			height:600px;
+			background-image: url("images/welcome.jpg");
+			background-repeat: no-repeat;
+			flex-direction:column;
+			background-size: cover;
+		
+		}
+		table{
+		margin-left:200px;
+		margin-top:0px;
+		border:2px dashed black;
+		font-family:Comic Sans MS;
+		font-size:30px;
+		}
+		td{
+		text-align:center;
+		width:300px;
+		height:50px;
+		}
+		
+		
+	</style>
+
+</head>
+<body onload="showTime()">
+<!-- for Picture in top-->
+	<header >
+		<div class="bgflex">
+		</div>
+	</header>
+<!--navigation Bar-->
+	<nav>
+		<div>
+		<ul id="navigation">
+			  <li id="navigation_items"><a class="active" href="index.html">Home</a></li>
+			  <li id="navigation_items"><a href="pages/CV.html">CV</a></li>
+			  <li id="navigation_items"><a href="pages/research.html">Research</a></li>
+			  <li id="navigation_items"><a href="pages/blogs.html">Blogs</a></li>
+			  <li id="navigation_items"><a href="pages/Contact.html" >Contact</a></li>
+		</ul>
+		</div>		
+	</nav>
+<!--inserting javascript from external js file for making navigation bar stick while scrolling-->
+	<script src="javascript/javascript.js">
+	</script>
+<!--image in right side-->
+	<div>
+		<table >
+			<tr>
+				<td>Time in Nepal</td>
+			</tr>
+			<tr >
+				<td><span id="hour"></span></td>
+			</tr>
+			
+		</table>
+		<script>
+		function showTime(){
+			var date = new Date();
+			var h = date.getHours();
+			var m = date.getMinutes(); 
+			var s = date.getSeconds(); 
+			var session = "AM";
+			
+			if(h == 0){
+				h = 12;
+			}
+			
+			if(h > 12){
+				h = h - 12;
+				session = "PM";
+			}
+			
+			
+			var time = h + ":" + m + ":" + s + " " + session;
+			document.getElementById("hour").innerText = time;
+		 
+			
+			setTimeout(showTime, 1000);
+			
+			}
+
+			showTime(); 
+		</script>
+		<img  style="float:right;width:230px;margin-bottom:0px;margin-left:1020px;margin-right:250pxpx;margin-top:20px" src=" images/homepage2_removebg.png "  alt="Profile"  >
+		
+	</div>
+<!-- introduction text on left side-->	
+	<div style="padding-bottom:0px;padding-top:0px;padding-left:300px;padding-right:0px;">
+		<font class="text" style="font-family:Georgia; color:#303030;font-size:20px;text-align:center">Hello Everyone!<br></font>
+	</div>
+	<div>
+		<b><font class="text"  style="padding-bottom:0px;padding-top:0px;padding-left:200px;padding-right:0px;font-family:Comic Sans MS; color:black;font-size:40px">Its me! Sagar Poudel</font></b>
+	</div>
+	<div style="padding-bottom:0px;padding-top:0px;padding-left:200px;padding-right:0px;">
+		<font class="text" style="font-family:Georgia; color:black;font-size:20px;text-align:center">An Enthusiastic Person with a lot of Humour<br></font>
+	</div><br>
+<!--For icon for social platform-->
+	<div class="flex_container">
+		<div>
+			<a href="https://www.facebook.com/sagarpoudel638"  target="_blank"><img style="float:left;width:20px;" src=" images/facebook.png "  alt="facebook"  ></a>
+		</div>
+		<div>
+			<a href="https://www.instagram.com/me_sagar18/"  target="_blank"><img style="float:left;width:20px;" src=" images/instagram.jpg "  alt="instagram"  ></a>
+		</div>
+	</div>
+<br><br>
+<!-- this is for About me portion in homepage-->
+	<div style="display:flex;flex-direction:column;margin-left:800px;display:flex;align-items:left;flex-direction:column;">
+		<div style="padding-bottom:0px;padding-top:0px;padding-left:0px;padding-right:0px;">
+			<font class="text" style="font-family:Georgia; color:#303030;font-size:20px;">About me</font>
+		</div>		
+		<div >
+			<b><font class="text" style="font-family:Comic Sans MS; color:black;font-size:40px;text-align:center">Humorous Person? Yeah!<br></font></b>
+		</div>
+		<div style="display:flex;flex-direction:row;">
+			<div>
+				<font class="text" style="font-family:Comic Sans MS;font-size:20px;"> Want to know more?--></font>
+			</div>
+			<!-- this is for link to direct CV page-->
+			<div>
+				<ul id="CV">
+					<li id="CVin"><a  href="pages/CV.html">Go to my CV</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><br><br><br><br><br><br><br><br><br><br><br>
+<!-- Portfolio Section-->	
+	<div style="padding-left:30px;margin-left:200px;margin-top:30px;display:flex;align-items:left;flex-direction:column;width:1000px">
+		<div style="padding-bottom:0px;padding-top:0px;padding-left:0px;padding-right:0px;">
+			<font class="text" style="font-family:Georgia; color:#303030;font-size:20px;">Portfolio</font>
+		</div>
+		<div style="padding-bottom:0px;padding-top:0px;padding-left:0px;padding-right:0px;">
+			<b><font class="text" style="font-family:Comic Sans Ms; font-size:35px">Take a Glance at some Pictures taken by me!</font><b>
+		</div><br>			
+		<!-- inserting images-->
+		<div style="padding-left:30px">
+			<button class="button" onclick="next()">Change Images</button>
+		</div><br><br>
+		<div style="display:flex; background-color:white;width:632px;">
+			<img class="image hide" id="1" src="images/shiva.jpeg"/>
+			<img class="image hide" id="2" src="images/sunset.jpg"/>
+			<img class="image hide" id="3" src="images/watch.jpg"/>
+			<img class="image hide" id="4" src="images/ktm.jpg"/>
+		</div>
+	</div>
+	<!-- Function to change images on click-->
+		<script>
+			function next() {
+				var img1 = document.getElementById("1"); 
+				var img2 = document.getElementById("2"); 
+				var img3=document.getElementById("3");  
+				var img4 = document.getElementById("4");
+				if (img1.style.display == "none") { 
+					img1.style.display = "block";   
+					img2.style.display = "none";    
+				}
+				else {							 
+					img1.style.display = "none";   
+					img2.style.display = "block";   
+				}
+				if (img3.style.display == "none") { 
+					img3.style.display = "block";  
+					img4.style.display = "none";   
+				}
+				else {							 
+					img3.style.display = "none";  
+					img4.style.display = "block";  
+				}
+			}	
+			document.getElementById("1").style.display = "block";
+			document.getElementById("3").style.display = "block";
+		</script><br><br><br><br>
+<!-- for blogs section-->
+		<div style="display:flex;flex-direction:column;margin-top:100px">
+			<div style="padding-left:570px;font-size:20px;color:#303030;font-family:Georgia;cursor:default;">Our Blogs</div>
+			<div style="padding-left:390px;font-size:17px;font-family:Georgia;margin-top:20px;cursor:default;">Our blogs are based on technology affecting our daily lives </div></div>
+			<div style="display:flex;height:500px;width:90%;margin-top:20px;align-items:left;cursor:default;">
+				<div class="flex_blog"> 
+					<img  class="blogimg" src="images/brain covered by technology.jpeg" alt="negative impact"></img>
+					<b>	<div class="blogtext text">Technology have fully overtaken our brain. We are so dependent to technology that we can't even think without help of 
+						technology.</div></b>
+				</div>
+				<div class="flex_blog"> 
+					<img class="blogimg" src="images/health care technology.jpeg" alt="positive impact"></img>
+					<b>	<div class="blogtext text"> By the help of technology , doctors and researchers are able to find cure of deadly diseases.</div></b>
+				</div>
+				<div class="flex_blog"> 
+					<img class="blogimg" src="images/learning from technology.jpg" alt="positive impact"></img>
+					<b>	<div class="blogtext text">Today students are able to learn about their subject Students show more attention due to technology and
+													its effective to teach by using technology.
+					</b></div>
+				</div>
+				<div class="flex_blog"> 
+					<img class="blogimg" src="images/negative technology.jpg" alt="negative impact" ></img>
+					<b>	<div class="blogtext text">Technology is making distant people near and near people distant.</div></b>
+				</div>
+			
+			</div>
+		</div>
+</body>
+
+</html>

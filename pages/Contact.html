@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+		<meta name="description" content="CV"/>
+		<meta name="keywords" content="HTML"/>
+		<meta name="author" content="Sagar"/>	
+		<link rel="stylesheet" href="../css/style.css">
+	<style>
+		.text{
+		cursor:default;
+		}
+		.button {
+		background-color: #F64C72;
+		border: none;
+		color: white;
+		padding: 7px 15px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin-left:480px;
+		margin-top:20px;
+		cursor: pointer;
+		border-radius:12px;
+		}
+		.button:hover{
+		 background-color: #000000;
+		color: white
+		
+		}
+		.bgflex
+		{
+			display:flex;
+			width:1500px;
+			height:600px;
+			background-image: url("../images/contact.jpg");
+			background-repeat: no-repeat;
+			flex-direction:column;
+			background-size: cover;
+		
+		}
+	</style>
+</head>
+<body >
+<!-- picture on top of webpage-->
+	<header >
+		<div class="bgflex">
+		</div>
+	</header>
+<!-- navigation bar-->
+<nav>
+	<div>
+	  <ul id="navigation">
+		  <li id="navigation_items"><a  href="../index.html">Home</a></li>
+		  <li id="navigation_items"><a href="CV.html">CV</a></li>
+		  <li id="navigation_items"><a href="research.html">Research</a></li>
+		  <li id="navigation_items"><a href="blogs.html">Blogs</a></li>
+		  <li id="navigation_items"><a class="active" href="Contact.html" >Contact</a></li>
+		</ul>
+	</div>		
+</nav>
+<!-- external javascript-->
+<script src="../javascript/javascript.js">
+</script>
+<!-- box to make form and contact via side by side-->
+<div style="display:flex; width:100%;height:100%;">
+<!-- box to display form-->
+	<div style="box-shadow: 19px 21px 11px -10px rgba(0,0,0,0.84);border-radius:15%;display:flex; width:700px;height:700px; background: linear-gradient(to right, #3399ff 0%, #66ff66 100%);margin-top:150px;margin-left:430px;">
+		<b><form name="contact" onsubmit="validation()">
+			<div style="font-family:Georgia; font-size:20px;padding-top:150px;padding-left:200px;cursor:default">First Name: &nbsp  <input type="text" name="firstname"></div>
+			<div style="font-family:Georgia; font-size:20px;padding-top:25px;padding-left:200px;cursor:default">Last Name: &nbsp <input type="text" name="lastname"></div>
+			<div style="font-family:Georgia; font-size:20px;padding-top:25px;padding-left:200px;cursor:default">Email:  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="email"></div><br>
+			<div style="font-family:Georgia; font-size:20px;padding-left:200px;cursor:default">
+				Gender: <input type="radio" name="gender" value="male" checked> Male &nbsp &nbsp
+						<input type="radio" name="gender" value="female"> Female
+			</div>
+			<div style="font-family:Georgia; font-size:18px;padding-top:25px;padding-left:200px;cursor:default">Your message here <br><br>
+				<textarea name="message" rows="15" cols="45" placeholder="Enter Your Message"></textarea>
+			</div>
+				<input class="button" type="submit" value="Send">
+		</form></b>
+	</div>
+<!-- box to display contact via-->
+	<div style="box-shadow: 19px 21px 11px -10px rgba(0,0,0,0.84);border-radius:15%;display:flex; width:300px;height:250px; background: linear-gradient(to right, #3399ff 0%, #66ff66 100%);margin-top:250px;margin-left:65px;flex-direction:column;cursor:default">
+		<b><div style="font-family:helvetica ; font-size:18px;padding-left:70px;padding-top:25px;cursor:default"> Contact via </div></b>
+		<b><div style="font-family:helvetica ; font-size:18px;padding-left:10px;padding-top:25px;cursor:default">Phone No: +9779868299552</div></b>
+		<div style="display:flex">
+			<b><div style="font-family:helvetica ; font-size:18px;padding-left:10px;padding-top:25px;cursor:default">DM to Instagram</div></b>
+			<div><a href="https://www.instagram.com/me_sagar18/"  target="_blank"><img style="width:20px;padding-top:20px;padding-left:20px" src="../images/instagram.jpg"/></a></div>
+		</div>
+		<div style="display:flex">
+			<b><div style="font-family:helvetica ; font-size:18px;padding-left:10px;padding-top:15px;cursor:default">Leave Message on Facebook</div></b>
+			<div><a href="https://www.facebook.com/sagarpoudel638"  target="_blank"><img style="width:20px;padding-top:20px;padding-left:20px" src="../images/facebook.png"/></a></div>
+		</div>
+		<div style="display:flex">
+			<b><div style="font-family:helvetica ; font-size:18px;padding-left:10px;padding-top:15px;cursor:default">Mail to Gmail: sagarpoudel638@gmail.com</div></b>
+			
+		</div>
+</div>
+<!-- javascript to validate form-->
+<script>
+	function validation(){
+		var fname= document.forms["contact"]["firstname"].value;
+		var lname= document.forms["contact"]["lastname"].value;
+		var email=document.forms["contact"]["email"].value;
+		var message=document.forms["contact"]["message"].value;
+		if(message == ""|| fname == "" || email == ""||lname == "")
+		{
+			alert("Field Empty! Fill all Fields"); 
+		}
+		else
+		{
+			alert("Thank you for your support!");
+		}
+	}
+
+</script>
+
+</body>
+
+</html>
